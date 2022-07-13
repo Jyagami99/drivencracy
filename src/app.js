@@ -1,8 +1,8 @@
 import express, { json } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import choiceController from "./routes/choiceRouter.js";
-import pollController from "./routes/pollRouter.js";
+import choiceRouter from "./routes/choiceRouter.js";
+import pollRouter from "./routes/pollRouter.js";
 
 async function main() {
   dotenv.config();
@@ -11,8 +11,8 @@ async function main() {
 
   app.use(cors());
   app.use(json());
-  app.use(choiceController);
-  app.use(pollController);
+  app.use(choiceRouter);
+  app.use(pollRouter);
 
   const PORT = process.env.PORT || 3333;
 
