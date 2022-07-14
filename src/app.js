@@ -18,5 +18,5 @@ app.use(choiceRouter);
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-  console.log(`Now listening on ${PORT}`);
+  console.log(`O servidor subiu na porta ${PORT}.`);
 });

@@ -4,7 +4,7 @@ export function choiceValidation(req, res, next) {
   const validation = choiceSchema.validate(req.body);
 
   if (validation.error) {
-    res.sendStatus(422);
+    res.status(422).send(error);
     return;
   }
 
